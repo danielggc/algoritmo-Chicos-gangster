@@ -147,32 +147,27 @@ void calcular_chicos_gamster( int gangster_boys ){
  
     while( count < ( gangster_boys - end_race  ) ){
         if( following == Letf ){
-            printf("\nizquierda   =>%d",count);     
             if( ( count - 1 ) % 4 == 0 & count > 1   ){
                 Nodo * newEmogi = create_new_nodo( emoji_parcial_i );
                 aux_letft_nodo->letft =  newEmogi;
                 aux_letft_nodo = aux_letft_nodo -> letft; 
                 count++;
                 following = Rigth;
-                printf("emoji parcial ");
             }else {
                 Nodo * newEmogi = create_new_nodo( emoji_lateral_i );
                 aux_letft_nodo->letft =  newEmogi;
                 aux_letft_nodo = aux_letft_nodo -> letft; 
                 count++;
                 following = Rigth;
-                printf(" emoji lateral ");
             }
         }
         else{
-            printf("\nderecha   => "); 
             if( ( count - 2 ) % 4 == 0   & count > 2 ){
                 Nodo * newEmogi = create_new_nodo( emoji_parcial_d );
                 auc_rigth_nodo->rigth =  newEmogi;
                 auc_rigth_nodo = auc_rigth_nodo->rigth;
                 count++;
                 following = Letf;
-                printf("emoji parciar ");
             }
             else {
                 Nodo * newEmogi = create_new_nodo( emoji_lateral_d );
@@ -180,7 +175,6 @@ void calcular_chicos_gamster( int gangster_boys ){
                 auc_rigth_nodo = auc_rigth_nodo->rigth;
                 count++;
                 following = Letf;   
-                printf("emoji lateral "); 
             }  
         }
       }
